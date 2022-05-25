@@ -18,7 +18,7 @@ function Drum(props) {
 				play();
 			}
 		});
-	});
+	}, []);
 
 	return (
 		<div className={`drum ${playing ? "playing" : ""}`} onClick={play}>

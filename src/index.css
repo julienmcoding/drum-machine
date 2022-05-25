@@ -9,9 +9,12 @@
   flex-direction: column;
   padding-top: 128px;
   align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(-225deg, #2b2545 60%, #90748f 100%);
 }
 
 h1 {
+  color: wheat;
   font-size: 3rem;
   margin-bottom: 2rem;
 }
@@ -22,6 +25,20 @@ h1 {
   justify-content: center;
 }
 
+.drum-pad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #4158d0;
+  background-color: #ff3cac;
+  background-image: linear-gradient(
+    225deg,
+    #ff3cac 0%,
+    #784ba0 50%,
+    #2b86c5 100%
+  );
+  border-radius: 1rem;
+}
+
 .drum {
   background-color: crimson;
   border-radius: 1rem;
@@ -30,8 +47,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin: 1rem;
   cursor: pointer;
   transition: 0.3s;
 }
