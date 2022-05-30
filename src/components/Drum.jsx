@@ -12,13 +12,19 @@ function Drum(props) {
 		}, 150);
 	};
 
-	useEffect(() => {
+	function handlePlay() {
 		document.addEventListener("keydown", (e) => {
 			if (e.key.toLowerCase() === props.letter.toLowerCase()) {
 				play();
 			}
 		});
-	}, []);
+		return document.removeEventListener('keydown', handlePlay)
+    }
+    
+
+	useEffect(() => {
+		handlePlay()
+	});
 
 	return (
 		<div className={`drum ${playing ? "playing" : ""}`} onClick={play}>

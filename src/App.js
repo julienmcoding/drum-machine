@@ -62,11 +62,23 @@ function App() {
   return (
     <div className="App">
       <h1>React Drumkit</h1>
-      <div className="drums">
-        <div className="drum-pad">
-          {sounds.map((sound, i) => (
-            <Drum key={i} letter={sound.key} sound={sound.sound} />
-          ))}
+      <div className="machine">
+        <div className="drums">
+          <div className="drum-pad">
+            {sounds.map((sound, i) => (
+              <Drum key={i} letter={sound.key} sound={sound.sound} />
+            ))}
+          </div>
+        </div>
+        <div className="side-panel">
+          <div className="label">Drum Machine ZT-1992</div>
+          <div className="speakers">
+            <hr></hr>
+            <hr></hr>
+            <hr></hr>
+            <hr></hr>
+            <hr></hr>
+          </div>
         </div>
       </div>
     </div>
